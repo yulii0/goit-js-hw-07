@@ -11,6 +11,9 @@ const instance = basicLightbox.create(
     onShow: (instance) => {
         document.addEventListener("keydown", onBtnEscPush);
     },
+    onShow: (instance) => {
+        document.removeEventListener("keydown", onBtnEscPush);
+    },
     }
 );
 
